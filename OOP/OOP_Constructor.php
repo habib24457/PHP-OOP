@@ -8,7 +8,7 @@ class Person
 {
     public $name;
 
-    function __construct($personName)
+    function __construct($personName, $age = 0)
     {
         echo "A new Constructor is created";
         $this->name = $personName;
@@ -20,6 +20,11 @@ class Person
     }
 }
 
+#we can also keep a parameter optional like age variable in person class by putting a default value in it
+
+$p = new Person('Habib');
+
+
 class Movie
 {
 
@@ -27,10 +32,10 @@ class Movie
     public $movieGenre;
     public $boxOffice;
 
-    function __construct($movieName, $movieGenre, $boxOffice)
+    function __construct($name, $genre, $boxOffice)
     {
-        $this->movieName = $movieName;
-        $this->movieGenre = $movieGenre;
+        $this->movieName = $name;
+        $this->movieGenre = $genre;
         $this->boxOffice = $boxOffice;
     }
 
